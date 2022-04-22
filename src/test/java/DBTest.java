@@ -35,7 +35,7 @@ public class DBTest{
         try {
             a = DataBase.connected();
             String expected = DataBase.particularDateRange(a);
-            Assert.assertEquals("Apirya", expected);
+            Assert.assertEquals("Rohit", expected);
         } catch (SQLException e) {
             e.printStackTrace();
         }
