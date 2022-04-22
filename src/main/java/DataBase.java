@@ -15,9 +15,9 @@ public class DataBase {
 
 
     public static Connection connected() {
-        String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/payrollService?useSSL=false";
+        String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/payrollService1?useSSL=false";
         String userName = "root";
-        String password = "elnino09@";
+        String password = "Krunali29!";
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
