@@ -35,7 +35,17 @@ public class DBTest{
         try {
             a = DataBase.connected();
             String expected = DataBase.particularDateRange(a);
-            Assert.assertEquals("Apirya", expected);
+            Assert.assertEquals("Rohit", expected);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    void givenGender_shouldReturn_SumSalary() {
+        try {
+            a = DataBase.connected();
+            String expected = DataBase.sumByGroup(a);
+            Assert.assertEquals("110000.0", expected);
         } catch (SQLException e) {
             e.printStackTrace();
         }
