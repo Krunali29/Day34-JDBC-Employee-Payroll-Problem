@@ -23,7 +23,7 @@ public class DBDemo {
         }
         listDrivers();
         try {
-            System.out.println("connecting tothe database:" + jdbcURL);
+            System.out.println("connecting to the database:" + jdbcURL);
             connection = DriverManager.getConnection(jdbcURL, userName, password);
             System.out.println("connection is successful!!!!" + connection);
         } catch (Exception e) {
