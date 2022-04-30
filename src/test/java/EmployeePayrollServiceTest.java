@@ -89,11 +89,11 @@ public class EmployeePayrollServiceTest {
     @Test
     public void givenEmployeeWhenRemoved_ShouldRemainInDatabase() throws PayrollServiceException {
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
-        employeePayrollService.readEmployeePayrollData(IOService.DB_IO);
-        int countOfEmployeeRemoved = employeePayrollService.removeEmployeeFromPayroll("Mark", IOService.DB_IO);
+        employeePayrollService.readEmployeePayrollData(EmployeePayrollService.IOService.DB_IO);
+        int countOfEmployeeRemoved = employeePayrollService.removeEmployeeFromPayroll("Mark", EmployeePayrollService.IOService.DB_IO);
         Assert.assertEquals(2, countOfEmployeeRemoved);
         List<EmployeePayrollData> employeePayrollData = employeePayrollService
-                .readActiveEmployeePayrollData(IOService.DB_IO);
+                .readActiveEmployeePayrollData(EmployeePayrollService.IOService.DB_IO);
         Assert.assertEquals(4, employeePayrollData.size());
     }
 }
